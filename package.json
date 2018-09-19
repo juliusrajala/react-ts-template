@@ -3,12 +3,17 @@
   "version": "1.0.0",
   "description": "For kickstarting simple apps on the fly",
   "main": "index.js",
+  "engines": {
+    "node": "^8.12.0"
+  },
   "scripts": {
     "dev": "npm run build-static && webpack-dev-server --mode development",
     "clean": "rm -rf dist",
     "build-static": "shx mkdir -p dist/ && cp -r public/* dist/",
-    "serve": "npm run build && http-server ./dist -p 8000",
-    "build": "npm run build-static && webpack --mode production"
+    "start": "npm run build && http-server ./dist -p 8000",
+    "build": "npm run build-static && webpack --mode production",
+    "test": "jest --coverage",
+    "test:watch": "jest --watch --coverage"
   },
   "keywords": [
     "react",
@@ -17,11 +22,19 @@
   "author": "Julius Rajala <juliusrajala@gmail.com>",
   "license": "ISC",
   "devDependencies": {
+    "@types/enzyme": "^3.1.13",
+    "@types/jest": "^23.3.2",
     "@types/react": "^16.3.14",
     "@types/react-dom": "^16.0.5",
+    "enzyme": "^3.6.0",
+    "enzyme-adapter-react-16": "^1.5.0",
+    "enzyme-to-json": "^3.3.4",
     "file-loader": "1.1.11",
     "http-server": "^0.11.1",
+    "jest": "^23.6.0",
+    "redux-devtools-extension": "^2.13.5",
     "shx": "^0.2.2",
+    "source-map-loader": "^0.2.4",
     "ts-loader": "4.3.0",
     "typescript": "^2.8.3",
     "webpack": "4.8.3",
@@ -29,8 +42,30 @@
     "webpack-dev-server": "3.1.4"
   },
   "dependencies": {
+    "immer": "^1.6.0",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
+    "react-redux": "^5.0.7",
+    "redux": "^4.0.0",
+    "redux-observable": "^1.0.0",
+    "rxjs": "^6.3.2",
     "styled-components": "^3.2.6"
+  },
+  "jest": {
+    "setupFiles": [
+      "./lib/tests/setupEnzyme.js",
+      "./lib/tests/setupShim.js"
+    ],
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "^.+\\.(ts|tsx)$": "./lib/tests/setupTypescript.js"
+    },
+    "testMatch": [
+      "**/*.spec.(ts|tsx|js)"
+    ]
   }
 }

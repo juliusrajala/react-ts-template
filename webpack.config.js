@@ -11,7 +11,8 @@ const config = {
   module: {
     rules: [
       { test: /\.tsx?$/, loader: 'ts-loader', exclude: /node_modules/ },
-      { loader: 'file-loader', test: [/\.jpe?g$/, /\.png$/], exclude: /node_modules/ }
+      { loader: 'file-loader', test: [/\.jpe?g$/, /\.png$/], exclude: /node_modules/ },
+      { test: /\.js$/, use: ["source-map-loader"], enforce: "pre" }
     ]
   },
   resolve: {
@@ -20,6 +21,7 @@ const config = {
     },
     extensions: ['.tsx', '.ts', '.js'],
   },
+  devtool: "source-map",
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
     hot: true,
