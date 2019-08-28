@@ -1,10 +1,10 @@
 # React Typescript Template
 
-This is a slightly opinionated starter kit for a React Application using Typescript.
+This is a somewhat opinionated starter kit for a React Application using Typescript.
 
-I'm a big fan of [Create React App](https://github.com/facebook/create-react-app) and for the most part, would still recommend using CRA as a template for your React Apps over this one.
+I'm a big fan of [Create React App](https://github.com/facebook/create-react-app) and for the most part, would still recommend using CRA to get started with most of your react-application needs.
 
-I still figured I'd provide an option due to a few discussions I've had with people who have felt they'd like a slightly lighter starter package. That's where this is supposed to step in.
+What this starter template aims to provide is a lightweight alternative without all the bells and whistles attached.
 
 ## Usage
 
@@ -20,11 +20,8 @@ $ npm run dev
 
 ### Build and serve locally
 
-`$ npm serve`
+`npm serve`
 
 ## License
 
-MIT, 2018 Julius Rajala
-
-The template was built as part of Futurice's [Spice Program](https://spiceprogram.org/).
-
+MIT, 2019 Julius Rajala
