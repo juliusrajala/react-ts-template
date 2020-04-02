@@ -1,6 +1,5 @@
-import * as React from 'react';
-import { Heading, Page, Paragraph } from 'src/ui/styles';
-import styled from 'styled-components';
+import * as React from "react";
+import styled from "styled-components";
 
 const P1 = `Did you know that giraffes use their heads as weapons?`;
 const P2 = `
@@ -13,23 +12,25 @@ const P3 = `
   and warm summer day, writing placeholders that nobody will likely read.
 `;
 
-const Greeting = styled.section`
+const Section = styled.section`
   width: 600px;
   max-width: 100%;
   text-align: left;
 `;
 
-const MainView = (props) => {
-  return (
-    <Page>
-      <Greeting>
-        <Heading>Hello World!</Heading>
-        <Paragraph>{P1}</Paragraph>
-        <Paragraph>{P2}</Paragraph>
-        <Paragraph>{P3}</Paragraph>
-      </Greeting>
-    </Page>
-  )
+interface Props {
+  target: string;
 }
 
-export default MainView;
+const Greeting = (props: Props) => {
+  return (
+    <Section>
+      <h1>Hello {props.target}!</h1>
+      <p>{P1}</p>
+      <p>{P2}</p>
+      <p>{P3}</p>
+    </Section>
+  );
+};
+
+export default Greeting;

@@ -22,16 +22,11 @@
   "author": "Julius Rajala <juliusrajala@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "@types/enzyme": "^3.10.3",
     "@types/jest": "^23.3.14",
     "@types/react": "^16.9.2",
     "@types/react-dom": "^16.9.0",
-    "enzyme": "^3.10.0",
-    "enzyme-adapter-react-16": "^1.14.0",
-    "enzyme-to-json": "^3.4.0",
     "file-loader": "1.1.11",
     "http-server": "~0.12.1",
-    "jest": "~25.2.4",
     "redux-devtools-extension": "^2.13.8",
     "shx": "^0.2.2",
     "source-map-loader": "^0.2.4",
@@ -42,30 +37,8 @@
     "webpack-dev-server": "^3.8.0"
   },
   "dependencies": {
-    "immer": "^1.12.1",
     "react": "^16.9.0",
     "react-dom": "^16.9.0",
-    "react-redux": "^5.1.1",
-    "redux": "^4.0.4",
-    "redux-observable": "^1.1.0",
-    "rxjs": "^6.5.2",
     "styled-components": "^3.4.10"
-  },
-  "jest": {
-    "setupFiles": [
-      "./lib/tests/setupEnzyme.js",
-      "./lib/tests/setupShim.js"
-    ],
-    "moduleFileExtensions": [
-      "ts",
-      "tsx",
-      "js"
-    ],
-    "transform": {
-      "^.+\\.(ts|tsx)$": "./lib/tests/setupTypescript.js"
-    },
-    "testMatch": [
-      "**/*.spec.(ts|tsx|js)"
-    ]
   }
 }

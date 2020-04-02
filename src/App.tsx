@@ -1,7 +1,7 @@
-import * as React from 'react';
-import * as ReactDOM from 'react-dom';
-import MainView from 'src/ui/views/MainView';
-import styled from 'styled-components';
+import * as React from "react";
+import * as ReactDOM from "react-dom";
+import styled from "styled-components";
+import Greeting from "src/components/Greeting";
 // import { createStore, applyMiddleware } from 'redux';
 // import { Provider } from 'react-redux';
 // import { composeWithDevTools } from 'redux-devtools-extension';
@@ -16,14 +16,14 @@ function configureStore() {
     testStore,
     composeWithDevTools(applyMiddleware(epicMiddleWare))
   );
-  
+
   epicMiddleWare.run(epics);
 
   return store;
 } */
 
 const ReactApp = () => {
-/* Enable with Redux *
+  /* Enable with Redux *
   const reduxStore = configureStore();
   const { dispatch, getState } = reduxStore;
 
@@ -34,11 +34,11 @@ const ReactApp = () => {
 
   return ReactDOM.render(
     <App /* store={reduxStore} */ />,
-    document.getElementById('react-root')
+    document.getElementById("react-root")
   );
-}
+};
 
-const AppContainer = styled.section`
+const Page = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -51,10 +51,10 @@ const AppContainer = styled.section`
 
 const App: React.SFC<any> = ({ store }: any) => (
   // <Provider store={store}>
-    <AppContainer>
-      <MainView />
-    </AppContainer>
+  <Page>
+    <Greeting target="World" />
+  </Page>
   // </Provider>
-)
+);
 
 ReactApp();
