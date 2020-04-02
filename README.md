@@ -24,4 +24,4 @@ $ npm run dev
 
 ## License
 
-MIT, 2019 Julius Rajala
+MIT, 2020 Julius Rajala
