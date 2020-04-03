@@ -1,21 +1,38 @@
-import * as React from "react";
-import styled from "styled-components";
+import * as React from 'react';
+import styled from 'styled-components';
 
-const P1 = `Did you know that giraffes use their heads as weapons?`;
+const P1 = `This is a placeholder paragraph. These serve little to no purpose, except to provide some filler content here.`;
 const P2 = `
-  I think this is super terrifying. Imagine going about your
-  business and just happening upon a pair of giraffes flailing their
-  heads at each other to assert superiority.
+  This is also a placeholder. It holds place for some text that could be here.
 `;
-const P3 = `
-  Nature can be weird. Then again, I'm sitting inside on a beautiful
-  and warm summer day, writing placeholders that nobody will likely read.
+const Section = styled.section`
+  max-width: 600px;
+  width: 100%;
+  text-align: left;
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
 `;
 
-const Section = styled.section`
-  width: 600px;
-  max-width: 100%;
+const H1 = styled.h1`
+  font-family: Source Sans Pro, sans-serif;
+  font-size: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #cb7723;
+`;
+
+const P = styled.p`
+  font-family: Source Sans Pro, sans-serif;
+  line-height: 1.2;
+  font-size: 1.2rem;
   text-align: left;
+  width: 100%;
+  padding: 1rem;
+  color: #fff;
+  font-weight: 300;
 `;
 
 interface Props {
@@ -25,10 +42,9 @@ interface Props {
 const Greeting = (props: Props) => {
   return (
     <Section>
-      <h1>Hello {props.target}!</h1>
-      <p>{P1}</p>
-      <p>{P2}</p>
-      <p>{P3}</p>
+      <H1>Hello {props.target}!</H1>
+      <P>{P1}</P>
+      <P>{P2}</P>
     </Section>
   );
 };

@@ -1,13 +1,18 @@
 import * as React from 'react';
 import styled from 'styled-components';
-import { HorizontalBar, StyledLink } from 'src/ui/styles';
 
-const FooterBar = HorizontalBar.extend`
+const FooterBar = styled.div`
+  padding: 2rem;
   justify-content: center;
   align-items: center;
-  font-size: 1.3rem;
-  font-family: Montserrat, sans-serif;
+  font-size: 0.8rem;
+  font-family: Source Sans Pro, sans-serif;
   font-weight: 600;
+  text-transform: uppercase;
+  background: #bb3f3f;
+  color: #fff;
+  width: 100%;
+  text-align: center;
 
   @media (max-width: 500px), (max-device-width: 500px) {
     > * {
@@ -15,15 +20,6 @@ const FooterBar = HorizontalBar.extend`
     }
   }
 `;
-
-
-const Footer = () => (
-  <FooterBar>
-    Exists thanks to the&nbsp;
-    <StyledLink target="_blank" href="https://spiceprogram.org">
-      Spice Program
-    </StyledLink>
-  </FooterBar>
-)
+const Footer = () => <FooterBar>Copyright Julius Rajala, 2020</FooterBar>;
 
 export default Footer;

@@ -7,13 +7,12 @@
     "node": "10.11.0"
   },
   "scripts": {
-    "dev": "npm run build-static && webpack-dev-server --mode development",
+    "start": "npm run build-static && webpack-dev-server --mode development",
     "clean": "rm -rf dist",
     "build-static": "shx mkdir -p dist/ && cp -r public/* dist/",
-    "start": "npm run build && http-server ./dist -p 8000",
+    "serve": "npm run build && http-server ./dist -p 8000",
     "build": "npm run build-static && webpack --mode production",
-    "test": "jest --coverage",
-    "test:watch": "jest --watch --coverage"
+    "prettify": "prettier --write src/"
   },
   "keywords": [
     "react",
@@ -27,6 +26,7 @@
     "@types/react-dom": "^16.9.0",
     "file-loader": "1.1.11",
     "http-server": "~0.12.1",
+    "prettier": "~2.0.2",
     "redux-devtools-extension": "^2.13.8",
     "shx": "^0.2.2",
     "source-map-loader": "^0.2.4",

@@ -10,17 +10,30 @@ What this starter template aims to provide is a lightweight alternative without 
 
 Relatively simple usage. The package comes with a few npm scripts to get you started quickly.
 
-After cloning the repository:
-
 ### Development
+
+Development is simple. Install dependencies, run `npm start`.
+
 ```
 $ npm i
-$ npm run dev
+$ npm start
 ```
 
-### Build and serve locally
+### Code style
 
-`npm serve`
+Prettier is used to format code to keep format discussions to a minimum.
+
+Component-files should contain a components props equivalent interface.
+
+### Deployment
+
+After building the app, you can basically utilize any simple http-server to host its contents, or maybe simply drop it into an s3-bucket on amazon.
+
+There's a pre installed dev http-server you might also wish to use.
+
+```
+$ npm serve
+```
 
 ## License
 

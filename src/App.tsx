@@ -1,7 +1,8 @@
-import * as React from "react";
-import * as ReactDOM from "react-dom";
-import styled from "styled-components";
-import Greeting from "src/components/Greeting";
+import * as React from 'react';
+import * as ReactDOM from 'react-dom';
+import styled from 'styled-components';
+import Greeting from 'src/components/Greeting';
+import Footer from 'src/components/Footer';
 // import { createStore, applyMiddleware } from 'redux';
 // import { Provider } from 'react-redux';
 // import { composeWithDevTools } from 'redux-devtools-extension';
@@ -34,7 +35,7 @@ const ReactApp = () => {
 
   return ReactDOM.render(
     <App /* store={reduxStore} */ />,
-    document.getElementById("react-root")
+    document.getElementById('react-root')
   );
 };
 
@@ -46,13 +47,14 @@ const Page = styled.div`
   width: 100%;
   height: 100vh;
   min-height: 100%;
-  background-color: #f5f6fa;
+  background-color: #214761;
 `;
 
 const App: React.SFC<any> = ({ store }: any) => (
   // <Provider store={store}>
   <Page>
     <Greeting target="World" />
+    <Footer />
   </Page>
   // </Provider>
 );
